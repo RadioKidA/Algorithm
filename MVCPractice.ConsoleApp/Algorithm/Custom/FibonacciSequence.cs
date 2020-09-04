@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleApp.Algorithm.Common;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,11 +10,11 @@ namespace ConsoleApp.Algorithm.Custom
     /// </summary>
     class FibonacciSequence:IRunAlgorithm
     {
-        int[] _list;
+        private readonly List<int> _list;
 
         public FibonacciSequence()
         {
-            _list = new int[] {0, 1, 1, 2, 3, 5, 8 };
+            _list = new List<int>{0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 };
         }
         
         public int GetIndexNumber(int index)
@@ -27,7 +28,11 @@ namespace ConsoleApp.Algorithm.Custom
 
         public void Run()
         {
-            GetIndexNumber(7);
+            int n = 7;
+
+            Console.WriteLine("初始数组：");
+            _list.ForEach((item) => { Console.Write(item.ToString() + "  "); });
+            Console.WriteLine($"\n第{n}位为{GetIndexNumber(n)}（从下标0开始计数）");
         }
     }
 }

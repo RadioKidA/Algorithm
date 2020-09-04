@@ -1,71 +1,53 @@
-﻿using ConsoleApp.Algorithm.Custom;
+﻿using ConsoleApp.Algorithm;
+using ConsoleApp.Algorithm.Common;
 using System;
+using System.ComponentModel;
+using System.Reflection;
 
-namespace MVCPractice.ConsoleApp
+namespace ConsoleApp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            FibonacciSequence fibonacciSequence = new FibonacciSequence();
-            Console.WriteLine(fibonacciSequence.GetIndexNumber(4)); 
+            RunAlgorithm(AlgorithmName.FibonacciSequence);  //选择执行不同算法
+
+            //RunAllAlgorithm();    //执行所有算法
+            Console.ReadKey();
+
         }
         
-        static void RunAlgorithm(string AlgorithmName)
+        //反射执行算法
+        static void RunAlgorithm(AlgorithmName algorithmName)
         {
+            string className = algorithmName.ToString();
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            Type type = assembly.GetType("ConsoleApp.Algorithm.Custom." + className);
+
+            dynamic obj = (IRunAlgorithm)Activator.CreateInstance(type,true);
+            obj.Run();
 
         }
 
-        static void iPhone_PriceChanged(object sender, PriceChangedEventArgs args)
+
+
+
+        //执行所有算法
+        static void RunAllAlgorithm()
         {
-            Console.WriteLine($"{args._newPrice}元，原价{args._oldPrice}");
-        }
-    }
-
-
-
-    //public delegate void PriceChangedHandler(decimal oldPrice, decimal newPrice);
-
-    public class IPhone
-    {
-        decimal price;
-        public event EventHandler<PriceChangedEventArgs> PriceChanged;
-        protected virtual void OnPriceChanged(PriceChangedEventArgs e)
-        {
-            if (PriceChanged != null)
-                PriceChanged(this, e);
-        }
-
-        public decimal Price
-        {
-            get { return price; }
-            set
+            foreach (var name in Enum.GetNames(typeof(AlgorithmName)))
             {
-                if (price == value)
-                {
-                    return;
-                }
-                decimal oldPrice = price;
-                price = value;
-                if (PriceChanged!=null)
-                {
-                    OnPriceChanged(new PriceChangedEventArgs(oldPrice,Price));
-                }
+                Console.WriteLine(name);
+                RunAlgorithm((AlgorithmName)Enum.Parse(typeof(AlgorithmName), name));
+                Console.WriteLine("\n\n\n");
             }
 
         }
-    }
 
-    public class PriceChangedEventArgs : EventArgs
-    {
-        public readonly decimal _oldPrice;
-        public readonly decimal _newPrice;
-        public PriceChangedEventArgs(decimal oldPrice,decimal newPrice)
+        public enum AlgorithmName
         {
-            _oldPrice = oldPrice;
-            _newPrice = newPrice;
+            FibonacciSequence   //斐波那契数列
+
         }
     }
-
-    
 }

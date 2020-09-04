@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleApp.Algorithm.Custom
+namespace ConsoleApp.Algorithm.Common
 {
     interface IRunAlgorithm
     {
