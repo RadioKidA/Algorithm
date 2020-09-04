@@ -8,9 +8,9 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            RunAlgorithm(AlgorithmName.FibonacciSequence);  //选择执行不同算法，调试用
+            //RunAlgorithm(AlgorithmName.BubbleSort);  //选择执行不同算法，调试用
 
-            //RunAllAlgorithm();    //执行所有算法
+            RunAllAlgorithm();    //执行所有算法
             Console.ReadKey();
 
         }
@@ -20,7 +20,8 @@ namespace ConsoleApp
         /// </summary>
         public enum AlgorithmName
         {
-            FibonacciSequence   //斐波那契数列
+            FibonacciSequence,   //斐波那契数列
+            BubbleSort  //冒泡排序
 
         }
 

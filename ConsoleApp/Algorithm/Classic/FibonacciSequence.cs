@@ -6,15 +6,15 @@ using System.Text;
 namespace ConsoleApp.Algorithm.Classic
 {
     /// <summary>
-    /// 
+    /// 斐波那契数列中的每一项都等于它的前两项的和。
     /// </summary>
     class FibonacciSequence:IRunAlgorithm
     {
-        private readonly List<int> _list;
+        private readonly int[] _list;
 
         public FibonacciSequence()
         {
-            _list = new List<int>{0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 };
+            _list = new int[]{0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 };
         }
         
         public int GetIndexNumber(int index)
@@ -31,7 +31,7 @@ namespace ConsoleApp.Algorithm.Classic
             int n = 7;
 
             Console.WriteLine("初始数组：");
-            _list.ForEach((item) => { Console.Write(item.ToString() + "  "); });
+            _list.PrintAll();
             Console.WriteLine($"\n第{n}位为{GetIndexNumber(n)}（从下标0开始计数）");
         }
     }
