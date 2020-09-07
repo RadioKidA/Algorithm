@@ -21,7 +21,8 @@ namespace ConsoleApp
         public enum AlgorithmName
         {
             FibonacciSequence,   //斐波那契数列
-            BubbleSort  //冒泡排序
+            BubbleSort,  //冒泡排序
+            QuickSort,	//快速排序
 
         }
 

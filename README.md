@@ -8,13 +8,17 @@ LeetCode中为LeetCode网站的算法题
 
 
 
-已完成：
+<b>已完成：</b>
 
-FibonacciSequence	斐波那契数列
+FibonacciSequence,   //斐波那契数列
+
+排序：
+
+BubbleSort  //冒泡排序
+
+QuickSort	//快速排序
 
 
 
-
-
-Todo：
+<b>Todo：</b>
 
