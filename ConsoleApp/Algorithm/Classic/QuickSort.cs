@@ -6,7 +6,7 @@ using System.Text;
 namespace ConsoleApp.Algorithm.Classic
 {
     /// <summary>
-    /// 
+    /// 快速排序
     /// </summary>
     class QuickSort:IRunAlgorithm
     {
@@ -92,22 +92,6 @@ namespace ConsoleApp.Algorithm.Classic
                 right = endIndex,    //右指针
                 pivot = arr[startIndex],  //锚点
                 pivotIndex = startIndex; //锚点位置
-
-            //while (left < right)
-            //{
-            //    while (arr[left]<=pivot)
-            //    {
-            //        left++;
-            //    }
-
-
-            //    while (arr[right]>pivot)
-            //    {
-            //        right--;
-            //    }
-
-            //    arr.Swap(left, right);
-            //}
 
             while (left!=right)
             {
