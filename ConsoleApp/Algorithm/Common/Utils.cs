@@ -36,6 +36,28 @@ namespace ConsoleApp.Algorithm.Common
             }
         }
 
+        /// <summary>
+        /// 数组转换成字符串
+        /// </summary>
+        /// <param name="list"></param>
+        /// <returns></returns>
+        public static string ConvertToString(this int[] list)
+        {
+            StringBuilder rst = new StringBuilder();
+            int length = list.Length;
+            for (int i = 0; i < length; i++)
+            {
+                rst.Append(list[i]);
+                if (i != length - 1) 
+                {
+                    rst.Append(", ");
+                }
+            }
+            return rst.ToString();
+        }
+
+
+
         #endregion
 
         #region 常用方法
@@ -47,6 +69,8 @@ namespace ConsoleApp.Algorithm.Common
             a = b;
             b = temp;
         }
+
+
 
         #endregion
 
