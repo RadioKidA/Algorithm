@@ -10,9 +10,17 @@ namespace ConsoleApp.Algorithm.Classic
     /// </summary>
     class QuickSort:IRunAlgorithm
     {
-        public QuickSort()
+        public void Run()
         {
-            
+            int[] list = new int[] { 48, 13, 65, 84, 15, 3, -39, 21 };
+            SortA(list, 0, list.Length - 1);
+            list.PrintAll();
+
+            Console.WriteLine();
+
+            list = new int[] { 48, 13, 65, 84, 15, 3, -39, 21 };
+            SortB(list, 0, list.Length - 1);
+            list.PrintAll();
         }
 
         /// <summary>
@@ -117,19 +125,6 @@ namespace ConsoleApp.Algorithm.Classic
             arr.Swap(left, startIndex);
 
             return left;
-        }
-
-        public void Run()
-        {
-            int[] list = new int[] { 48, 13, 65, 84, 15, 3, -39, 21 };
-            SortA(list,0,list.Length-1);
-            list.PrintAll();
-
-            Console.WriteLine() ;
-
-            list = new int[] { 48, 13, 65, 84, 15, 3, -39, 21 };
-            SortB(list, 0, list.Length - 1);
-            list.PrintAll();
         }
     }
 }
