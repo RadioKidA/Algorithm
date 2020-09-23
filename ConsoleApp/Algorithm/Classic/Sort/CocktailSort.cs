@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleApp.Algorithm.Classic
+namespace ConsoleApp.Algorithm.Classic.Sort
 {
     /// <summary>
     /// 鸡尾酒排序：
@@ -14,14 +14,11 @@ namespace ConsoleApp.Algorithm.Classic
     /// </summary>
     class CocktailSort : IRunAlgorithm
     {
-        public CocktailSort()
-        {
-
-        }
-
         public void Run()
         {
             int[] arr = new int[] { 7, -2, 8, 3, 4, 5, 6 };
+
+            Console.WriteLine("鸡尾酒排序：");
             Console.WriteLine("原始数组：");
             arr.PrintAll();
 

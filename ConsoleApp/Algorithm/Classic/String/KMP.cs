@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleApp.Algorithm.Classic
+namespace ConsoleApp.Algorithm.Classic.String
 {
     /// <summary>
     /// kmp算法：

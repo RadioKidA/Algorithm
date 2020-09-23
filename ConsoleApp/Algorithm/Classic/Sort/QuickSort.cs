@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleApp.Algorithm.Classic
+namespace ConsoleApp.Algorithm.Classic.Sort
 {
     /// <summary>
     /// 快速排序
@@ -12,6 +12,7 @@ namespace ConsoleApp.Algorithm.Classic
     {
         public void Run()
         {
+            Console.WriteLine("快速排序：");
             int[] list = new int[] { 48, 13, 65, 84, 15, 3, -39, 21 };
             SortA(list, 0, list.Length - 1);
             list.PrintAll();

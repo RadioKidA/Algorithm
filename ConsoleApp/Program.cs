@@ -24,24 +24,33 @@ namespace ConsoleApp
         public enum ClassicAlgorithmName
         {
             #region 数组
-            FibonacciSequence,   //斐波那契数列
+            FibonacciSequence,   //斐波那契数列    √
 
             #endregion
 
             #region 排序
-            BubbleSort,  //冒泡排序
-            QuickSort,	//快速排序
-            CocktailSort,   //鸡尾酒排序
+            BubbleSort,  //冒泡排序    √
+            QuickSort,	//快速排序    √
+            CocktailSort,   //鸡尾酒排序    √
+            ShellSort,  //希尔排序
+            SelectionSort,  //选择排序    √
+            MergeSort,  //归并排序    √
+            InsertionSort, //插入排序
+            HeapSort,    //堆排序
+
             #endregion
 
             #region 查找
-            BinarySearch, //二分查找
+            BinarySearch, //二分查找    √
+
             #endregion
 
             #region 字符串
-            KMP,    //KMP字符串匹配算法
-            BF,     //BF字符串匹配算法
-            RK,     //RK字符串匹配算法
+            KMP,    //KMP   
+            BF, //BF    √
+            BM, //BM
+            RK, //RK
+
             #endregion
 
             #region 树
@@ -50,13 +59,12 @@ namespace ConsoleApp
             #endregion
 
             #region 图
-            
-
+            Dijkstra,   //最短路径
+            AStar,  //A*算法
             #endregion
 
             #region 其他
-
-            LRU,    //内存淘汰算法
+            LRU,    //内存淘汰策略
 
             #endregion
 

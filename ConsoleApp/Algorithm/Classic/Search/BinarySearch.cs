@@ -3,12 +3,18 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleApp.Algorithm.Classic
+namespace ConsoleApp.Algorithm.Classic.Search
 {
+    /// <summary>
+    /// 二分查找
+    /// 每一次都用目标数字和当前范围的中位数相比
+    /// 如果小于或大于中位数，将查找范围缩小一半
+    /// </summary>
     class BinarySearch : IRunAlgorithm
     {
         public void Run()
         {
+            Console.WriteLine("二分查找：");
             Test1();
             Test2();
         }

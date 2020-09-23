@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 
-namespace ConsoleApp.Algorithm.Classic
+namespace ConsoleApp.Algorithm.Classic.Sort
 {
     /// <summary>
     /// 冒泡排序比较数组中相邻的两个数字，较大的交换到后面，也就是向上冒泡
@@ -12,39 +12,38 @@ namespace ConsoleApp.Algorithm.Classic
     /// </summary>
     class BubbleSort : IRunAlgorithm
     {
-        int[] _list;
-        public BubbleSort()
+        public void Run()
         {
-            _list = new int[] { 48, 13, 65, 84, 15, 3, -39, 21 };
+            Console.WriteLine("冒泡排序：");
+            int[] arr = new int[] { 48, 13, 65, 84, 15, 3, -39, 21 };
+            Console.Write("初始数组为：");
+            arr.PrintAll();
+            Console.WriteLine();
+            Sort(arr);
         }
-        public void Sort()
+
+        public void Sort(int[] arr)
         {
-            int length = _list.Length;
-            int i = 0, j = _list.Length-1;
+            int length = arr.Length;
+            int i = 0, j = arr.Length-1;
             while (j > 1)
             {
                 i = 0;
                 while (i < length - 1)
                 {
-                    if (_list[i] > _list[i + 1])
+                    if (arr[i] > arr[i + 1])
                     {
-                        _list.Swap(i, i + 1);
+                        arr.Swap(i, i + 1);
                     }
                     i++;
                 }
                 Console.Write($"第{length-j}轮排序结果为：");
-                _list.PrintAll();
+                arr.PrintAll();
                 Console.WriteLine();
                 j -= 1;
             }
         }
 
-        public void Run()
-        {
-            Console.Write("初始数组为：");
-            _list.PrintAll();
-            Console.WriteLine();
-            Sort();
-        }
+
     }
 }
