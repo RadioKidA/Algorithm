@@ -8,6 +8,9 @@ namespace ConsoleApp.Algorithm.Classic
 {
     /// <summary>
     /// LRU内存淘汰算法
+    /// 未完成
+    /// 
+    /// 
     /// </summary>
     class LRU : IRunAlgorithm
     {
