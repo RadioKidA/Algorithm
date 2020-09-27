@@ -32,7 +32,7 @@ namespace ConsoleApp
             BubbleSort,  //冒泡排序    √
             QuickSort,	//快速排序    √
             CocktailSort,   //鸡尾酒排序    √
-            ShellSort,  //希尔排序
+            ShellSort,  //希尔排序    √
             SelectionSort,  //选择排序    √
             MergeSort,  //归并排序    √
             InsertionSort, //插入排序
@@ -46,7 +46,7 @@ namespace ConsoleApp
             #endregion
 
             #region 字符串
-            KMP,    //KMP   
+            KMP,    //KMP   👴不会，学好再写
             BF, //BF    √
             BM, //BM
             RK, //RK
